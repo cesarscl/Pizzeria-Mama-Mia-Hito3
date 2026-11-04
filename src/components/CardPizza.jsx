@@ -11,10 +11,14 @@ const CardPizza = ({ name, price, ingredients, img }) => {
           style={{ height: "200px", objectFit: "cover" }}
         />
         <div className="card-body d-flex flex-column">
-          <h5 className="card-title">Pizza {name}</h5>
+          <h5 className="card-title text-capitalize">Pizza {name}</h5>
 
           <p className="text-secondary small mb-1">Ingredientes:</p>
-          <p className="small">🍕 {ingredients.join(", ")}</p>
+          <ul className="small ps-3">
+            {ingredients.map((ingredient) => (
+              <li key={ingredient}>🍕 {ingredient}</li>
+            ))}
+          </ul>
 
           <p className="fs-5 fw-bold text-center my-2">
             Precio: ${formatPrice(price)}

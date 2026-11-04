@@ -24,7 +24,7 @@ const Navbar = ({ onNavigate }) => {
             </>
           )}
 
-          <button className="btn btn-warning btn-sm fw-semibold">
+          <button className="btn btn-warning btn-sm fw-semibold" onClick={() => onNavigate("cart")}>
             🛒 Total: ${formatPrice(total)}
           </button>
         </div>
